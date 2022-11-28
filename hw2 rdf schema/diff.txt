@@ -1,0 +1,13 @@
+models are unequal
+
+< 25 triples
+> 34 triples
+> [http://example.org/photo2, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/photos]
+> [http://example.org/Peakvisor, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/tools]
+> [http://example.org/Berchtesgarten, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sources]
+> [http://example.org/photos, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/photos]
+> [http://example.org/photo3, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/photos]
+> [http://example.org/photo1, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/photos]
+> [http://example.org/Googlelens, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sources]
+> [http://example.org/Yandex, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/tools]
+> [http://example.org/Tripadvisor, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sources]

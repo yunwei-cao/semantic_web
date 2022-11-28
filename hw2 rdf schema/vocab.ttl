@@ -1,0 +1,41 @@
+PREFIX ex: <http://example.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+ex:landscape a rdfs:class ;
+    rdfs:label "landscape" .
+
+ex:photos a rdfs:Container ;
+    rdfs:member ex:photo1, ex:photo2, ex:photo3 .
+
+ex:arecaptured a rdf:Property ;
+    rdfs:domain ex:landscape ;
+    rdfs:range ex:photos .
+
+ex:sources a rdfs:Container ;
+    rdfs:member ex:Tripadvisor, ex:Berchtesgarten, ex:Googlelens .
+
+ex:tools a rdfs:Container ;
+    rdfs:member ex:Yandex, ex:Peakvisor .
+
+ex:takenby a rdf:Property ;
+    rdfs:domain ex:photos ;
+    rdfs:label "taken by" .
+
+ex:comparedwith a rdf:Property ;
+    rdfs:domain ex:photos ;
+    rdfs:range ex:sources ;
+    rdfs:label "compared with" .
+
+ex:usedwith a rdf:Property ;
+    rdfs:domain ex:photos ;
+    rdfs:range ex:tools ;
+    rdfs:label "used with" .
+
+ex:year a rdf:Property ;
+    rdfs:domain ex:photos .
+
+
+
+

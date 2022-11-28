@@ -1,0 +1,49 @@
+@prefix ex:   <http://example.org/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+ex:photo2  rdf:type      ex:photos ;
+        ex:comparedwith  ex:Berchtesgarten ;
+        ex:takenby       ex:unknown ;
+        ex:usedwith      ex:Yandex ;
+        ex:year          "1911"^^xsd:gYear .
+
+ex:Peakvisor  rdf:type  ex:tools ;
+        rdfs:comment  "A 3D compass and an altimeterer." ;
+        rdfs:label    "Peakvisor"@en .
+
+xsd:gYear  rdfs:subClassOf  rdfs:Literal .
+
+ex:Berchtesgarten  rdf:type  ex:sources ;
+        rdfs:comment  "The German name of an old postcard." ;
+        rdfs:label    "Berchtesgarten"@ger .
+
+ex:photos  rdf:type  ex:photos .
+
+ex:photo3  rdf:type      ex:photos ;
+        ex:comparedwith  ex:Googlelens ;
+        ex:takenby       ex:unknown ;
+        ex:usedwith      ex:Peakvisor ;
+        ex:year          ex:unknown .
+
+ex:Bavarian_Alps  rdf:type  ex:landscape ;
+        ex:arecaptured  ex:photos .
+
+ex:Googlelens  rdf:type  ex:sources ;
+        rdfs:comment  "The English name of a Google product used for recognizing images." ;
+        rdfs:label    "Googlelens"@en .
+
+ex:photo1  rdf:type      ex:photos ;
+        ex:comparedwith  ex:Tripadvisor ;
+        ex:takenby       ex:unknown ;
+        ex:usedwith      ex:Yandex ;
+        ex:year          "2018"^^xsd:gYear .
+
+ex:Yandex  rdf:type   ex:tools ;
+        rdfs:comment  "A Russian search engine." ;
+        rdfs:label    "Yandex"@en .
+
+ex:Tripadvisor  rdf:type  ex:sources ;
+        rdfs:comment  "The English name of a website about trip." ;
+        rdfs:label    "Tripadvisor"@en .
