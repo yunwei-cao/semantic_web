@@ -1,0 +1,12 @@
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+# streams in Orange County
+SELECT distinct ?stream ?streamLabel WHERE {
+    ?stream wdt:P31 wd:Q47521 ;
+            wdt:P131 wd:Q507957 .
+SERVICE wikibase:label { bd:serviceParam wikibase:language "en" . }
+}
+order by ?streamLabel

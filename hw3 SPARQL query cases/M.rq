@@ -1,0 +1,15 @@
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+#Rivers in Orange County, by type
+SELECT distinct ?watercourse ?watercourseLabel ?type ?typeLabel
+WHERE
+{
+  ?watercourse wdt:P31/wdt:P279* wd:Q355304; 
+               wdt:P131 wd:Q507957;
+               wdt:P31 ?type.
+SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+order by ?watercourseLabel

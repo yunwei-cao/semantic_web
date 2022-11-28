@@ -1,0 +1,8 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+# places with "butt" in their names
+SELECT ?uri ?name WHERE {
+	?uri skos:prefLabel ?name .
+  filter(regex(?name,"butt","i")) # List the name of places having “butt” (insensitive to cases)
+}
+order by ?name

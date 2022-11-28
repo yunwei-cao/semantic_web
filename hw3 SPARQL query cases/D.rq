@@ -1,0 +1,11 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ncv: <http://n2t.net/ark:/39333/ncg/vocab#>
+
+# places in the same county as Choggy Butte Mountain
+SELECT ?name WHERE {
+	?uri skos:prefLabel "Choggy Butte Mountain" ;
+  	     ncv:county ?county .
+  	?uris ncv:county ?county ;
+  	      skos:prefLabel ?name .
+}
+order by(?name) # list sorted alphabetically

@@ -1,0 +1,21 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX nct: <http://n2t.net/ark:/39333/ncg/type#>
+PREFIX ncv: <http://n2t.net/ark:/39333/ncg/vocab#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+# creeks in Orange County or Chatham County
+SELECT distinct ?uri ?name ?county_name
+WHERE {
+  ?uri dcterms:type ?type ; # extract all the types of places
+       skos:prefLabel ?name. # extract the matching labels (required by the final result)
+  filter(?type = nct:creek) # find the creek place
+  
+  {?uri ncv:county ?county . # extract all the counties
+  ?county skos:prefLabel ?county_name .  # find the matching labels of counties
+  filter regex(?county_name,"Orange County", "i") } # find the Orange County
+  UNION
+  {?uri ncv:county ?county . # extract all the counties
+  ?county skos:prefLabel ?county_name .  # find the matching labels of counties
+  filter regex(?county_name,"Chatham County", "i") } # find the Chatham County
+}
+order by ?county_name ?name 

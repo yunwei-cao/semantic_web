@@ -1,0 +1,41 @@
+PREFIX ex: <http://example.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+ex:Bavarian_Alps a ex:landscape ;
+    ex:arecaptured ex:photos .
+
+ex:photo1 ex:takenby ex:unknown ;
+    ex:comparedwith ex:Tripadvisor ;
+    ex:usedwith ex:Yandex ;
+    ex:year "2018"^^xsd:gYear .
+
+ex:photo2 ex:takenby ex:unknown ;
+    ex:comparedwith ex:Berchtesgarten ;
+    ex:usedwith ex:Yandex ;
+    ex:year "1911"^^xsd:gYear .
+
+ex:photo3 ex:takenby ex:unknown ;
+    ex:comparedwith ex:Googlelens ;
+    ex:usedwith ex:Peakvisor ;
+    ex:year ex:unknown .
+
+ex:Tripadvisor rdfs:label "Tripadvisor"@en ;
+    rdfs:comment "The English name of a website about trip." .
+
+ex:Berchtesgarten rdfs:label "Berchtesgarten"@ger ;
+    rdfs:comment "The German name of an old postcard." .
+
+ex:Googlelens rdfs:label "Googlelens"@en ;
+    rdfs:comment "The English name of a Google product used for recognizing images." .
+
+ex:Yandex rdfs:label "Yandex"@en ;
+    rdfs:comment "A Russian search engine." .
+
+ex:Peakvisor rdfs:label "Peakvisor"@en ;
+    rdfs:comment "A 3D compass and an altimeterer." .
+
+xsd:gYear rdfs:subClassOf rdfs:Literal .
+
+

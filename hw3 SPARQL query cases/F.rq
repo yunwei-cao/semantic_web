@@ -1,0 +1,5 @@
+# list all predicates used
+SELECT DISTINCT ?predicate WHERE {
+	?s ?predicate ?o.
+}
+order by ?predicate

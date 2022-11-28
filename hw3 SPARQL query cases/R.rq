@@ -1,0 +1,15 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ex: <http://example.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT
+{ ?photo ex:usedwith ?search_engine .
+  ?photo ex:takenby ?photographer .
+  ?photo ex:comparedwith ?application .}
+WHERE 
+{ ?search_engine rdfs:subClassOf ?tool .
+  ?tool dcterms:references ?photo . # define for the first predicate ex:usedwith
+  ?photographer dcterms:creator ?photo . # define for the second predicate ex:takenby
+  ?application dcterms:source/dcterms:description ?photo . # define for the third predicate ex:comparedwith
+}
+

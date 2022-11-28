@@ -1,0 +1,16 @@
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+# top ten most elevated swamps in NC
+SELECT ?swamp ?swampLabel ?elevation ?location 
+WHERE {
+?swamp wdt:P31 wd:Q166735 ;
+       wdt:P131* wd:Q1454 ;
+       wdt:P2044 ?elevation ;
+       wdt:P625 ?location .
+SERVICE wikibase:label { bd:serviceParam wikibase:language "en" . }
+}
+order by desc (?elevation)
+limit 10
