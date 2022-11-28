@@ -1,2 +1,2 @@
 *.ttl linguist-language=turtle
-*.Rmd linguist-language=turtle
+*.ttl linguist-language=turtle
