@@ -1,2 +1,2 @@
-*.ttl linguist-language=turtle
-*.ttl linguist-language=turtle
+*.ttl linguist-language=Terse RDF Triple
+*.rq linguist-language=Terse RDF Triple
